@@ -11,6 +11,14 @@ const numbersToWords = {
     8: "Eight",
     9: "Nine",
 };
-for (let i = 0; i < nums.length; i++) {
-    console.log(Math.floor(nums[i]));
+
+function numArrayToWords(nums) {
+    let finalStatement = "";
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < numArray.length; j++) {}
+        finalStatement += ",";
+    }
+    return finalStatement;
 }
+
+console.log(numArrayToWords(nums));
