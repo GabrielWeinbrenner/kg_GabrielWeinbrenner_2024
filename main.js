@@ -1,4 +1,4 @@
-let nums = process.argv;
+let nums = process.argv.slice(2);
 const numbersToWords = {
     0: "Zero",
     1: "One",
@@ -15,8 +15,12 @@ const numbersToWords = {
 function numArrayToWords(nums) {
     let finalStatement = "";
     for (let i = 0; i < nums.length; i++) {
-        for (let j = 0; j < numArray.length; j++) {}
-        finalStatement += ",";
+        let numArray = nums[i].toString().split("");
+
+        for (let j = 0; j < numArray.length; j++) {
+            finalStatement += numbersToWords[numArray[j]];
+        }
+        finalStatement += i == nums.length - 1 ? "" : ",";
     }
     return finalStatement;
 }
